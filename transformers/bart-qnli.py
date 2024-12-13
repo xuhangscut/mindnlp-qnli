@@ -13,11 +13,9 @@ def predict_qnli(model, tokenizer, device, question, sentence):
         outputs = model(input_ids=input_ids, attention_mask=attention_mask)
         logits = outputs.logits
 
-    # 获取预测类别
     return logits.argmax(dim=1).item()
 
 if __name__ == '__main__':
-    # 加载测试集
     test_file = './QNLI/dev.tsv'
     df = pd.read_csv(test_file, sep='\t', header=0, names=['idx', 'question', 'sentence', 'label'])
 
