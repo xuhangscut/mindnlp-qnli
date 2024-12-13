@@ -1,8 +1,29 @@
-# mindnlp-qnli
+# mindnlp-QNLI
 A repository comparing the inference accuracy of MindNLP and Transformer on the GLUE QNLI dataset
 
 
-# Accuracy Comparsion
+## Quick Start
+
+### Installation
+To get started with mindnlp-QNLI, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/xuhangscut/mindnlp-qnli.git
+2. **Create a conda environment (optional but recommended):**
+    ```bash
+    conda create -n mindnlp python==3.9
+    conda activate mindnlp
+2. **Install the dependencies:**
+Please note that mindnlp is in the Ascend environment, while transformer is in the GPU environment, and the required dependencies are in the requirements of their respective folders.
+    ```bash
+    cd mindnlp #or cd transformers
+    pip install -r requirements.txt
+3. **Usage**
+Once the installation is complete, you can choose use differnet models to start inference. Here's how to run the inference:
+    ```bash
+    python bart-qnli.py
+## Accuracy Comparsion
 |  Model Name | bart | bert | roberta | xlm-roberta | gpt2 | t5 | distilbert | albert | opt | llama |
 |---|---|---|---|---|---|---|---|---|---|---|
 |  base Model  | facebook/bart-base  |  google-bert/bert-base-uncased | FacebookAI/roberta-large | FacebookAI/xlm-roberta-large |  openai-community/gpt2 |  google-t5/t5-small |  distilbert/distilbert-base-uncased | albert/albert-base-v2  | facebook/opt-125m  | JackFram/llama-160m  |
